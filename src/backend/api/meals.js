@@ -85,7 +85,7 @@ router.delete("/:id", async (request, response) => {
 //query params 
 router.get("/", async (request, response) => {
   try{
-    key = Object.keys(request.query)[0];
+    let key = Object.keys(request.query)[0];
 
     const maxPrice = parseInt(request.query.maxPrice) || '1e500';
     const matchingTitle = request.query.title || '';
@@ -96,7 +96,7 @@ router.get("/", async (request, response) => {
 
 switch(true){
     case  typeof(key) === "undefined":
-           meals = await knex("meal")
+           let meals = await knex("meal")
            response.send(meals);
          break;
 

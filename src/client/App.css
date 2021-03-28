@@ -1,3 +1,134 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: rgb(5, 54, 54);
+  color: rgb(199, 126, 126);
+}
+/* footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10vh;
+    background-color: rgb(73 79 82);
+    color :rgb(199, 126, 126);
+  } */
+.nav-links,
+.footer-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+body {
+  background-color: rgb(145, 253, 248);
+}
+form {
+  display: inline;
+}
+
+.formData {
+  text-align: center;
+}
+/* mealDetail */
+.reservations {
+  align-items: center;
+  background-color: rgb(74, 228, 228);
+}
+
+/* .footer {
+    padding-top: 50px;
+  } */
+
+footer .nav {
+  /* this is footer navigation */
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  flex-direction: row;
+  list-style-type: none;
+  /* border: 1px solid #0000cd; */
+}
+
+footer nav a {
+  /*for header and footer  */
+  color: rgb(145, 253, 248);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.footer-start ul {
+  /*footer start  */
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  padding: 15px 30px 10px 50px;
+  /* padding-right: 350px; */
+  list-style-type: none;
+  font-family: "Helvetika", sans-serif;
+}
+
+.footer-center ul {
+  /* footer center  */
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.footer-center li {
+  /* footer center list  */
+  padding: 15px;
+  font-family: "Helvetika", sans-serif;
+}
+
+.footer-right ul {
+  /* footer end  */
+  display: flex;
+  text-align: right;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-right: 50px;
+}
+
+.footer-right li {
+  /* footer end list */
+  /* border: 1px solid #0000cd; */
+  padding: 15px;
+}
+
+.boxEffect {
+  width: 500px;
+  box-shadow: 8px 8px 6px 2px rgb(66, 66, 61);
+  /* width: 300px; */
+  /* margin-left: 200px; */
+  background-color: rgb(36, 126, 126);
+  color: rgb(145, 253, 248);
+}
+.mealImg {
+  padding: 25px 0 0 30px;
+}
+.meals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* align-items: center; */
+}
+.eachMeal {
+  box-shadow: 4px 2px 3px 3px rgb(66, 66, 61);
+}
+input {
+  background-color: rgb(145, 253, 248);
+}
+button {
+  background-color: rgb(36, 126, 126);
 }

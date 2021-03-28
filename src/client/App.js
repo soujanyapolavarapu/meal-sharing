@@ -1,19 +1,34 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import TestComponent from "./components/TestComponent/TestComponent";
+import Meals from "./components/TestComponent/Meals.js";
+import Nav from "./components/TestComponent/Nav.js";
+import Footer from "./components/TestComponent/Footer.js";
+import MealDetails from "./components/TestComponent/EachMeal.js";
+import Home from "./components/TestComponent/Home.js";
+import './App.css';
 
 function App() {
   return (
     <Router>
-      <Route exact path="/">
-        <p>test</p>
-      </Route>
-      <Route exact path="/lol">
-        <p>lol</p>
-      </Route>
-      <Route exact path="/test-component">
-        <TestComponent></TestComponent>
-      </Route>
+      <div className='App'>
+        {/* <div>
+        <style>{"body { background-image: url(src/client/components/TestComponent/img2.jpeg); }"}</style>
+        </div> */}
+        <Nav />
+
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/meals/:id">
+            <MealDetails></MealDetails>
+          </Route>
+          <Route exact path="/meals">
+            <Meals></Meals>
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
     </Router>
   );
 }

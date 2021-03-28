@@ -26,6 +26,7 @@ router.post("/", async (request, response) => {
       const reservations = await knex("reservation")
       .insert(request.body)
       response.json(reservations);
+      response.send(reservations);
     } catch (error) {
       throw error;
     }
