@@ -85,18 +85,18 @@ router.delete("/:id", async (request, response) => {
 //query params 
 router.get("/", async (request, response) => {
   try{
-    let key = Object.keys(request.query)[0];
+     key = Object.keys(request.query)[0];
 
     const maxPrice = parseInt(request.query.maxPrice) || '1e500';
     const matchingTitle = request.query.title || '';
     let  createdAfter = new Date(request.query.createdAfter) ;
     createdAfter = (createdAfter > 0) ? createdAfter.toISOString() : 0;
     const availableReservations = request.query.availableReservations || '';
-    const value = parseInt(request.query.limit) || '1e500';
+    value = parseInt(request.query.limit) || '1e500';
 
 switch(true){
     case  typeof(key) === "undefined":
-           let meals = await knex("meal")
+            meals = await knex("meal")
            response.send(meals);
          break;
 

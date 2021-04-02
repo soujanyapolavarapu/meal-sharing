@@ -1,58 +1,48 @@
-import React from "react";
+import React,{useState} from "react";
+import { FaSearch } from "react-icons/fa";
 
+const Home = ({ meals, isLoading }) => {
+  const [searchMeal, setSearchMeal] = useState("");
+  console.log(meals);
 
-const Home = () => {
   return (
     <div>
+      <div className="homeDiv">
+        <h1 className="headingInHome">Welcome to Meal Sharing</h1>
+        {isLoading ? (
+          <div>Loading....</div>
+        ) : (
+          <div className="search_input_box">
+            {/* <input
+              className="search_input"
+              type="text"
+              placeholder="search meal..."
+              value={searchMeal}
+              onChange={(e) => setSearchMeal(e.target.value)}
+            /> */}
+            {/* <FaSearch /> */}
+          </div>
+          
+        )}
+        <div className='row'>
+          
+         {searchMeal !== ''&& meals.map((meal) => (
+        <div key={meal.id}>
+            <div >
+            <h1>{meal.title}</h1>
+        </div>
+        </div>
+      ))}
+      </div>
+      </div>
       <img
-        src="src/client/components/TestComponent/backgroundImgMealShare.jpeg"
-        alt="MealSharing logo"
-        height="200"
-        width="200"
+        src="/src/client/components/TestComponent/img2.jpeg"
+        alt="food_image"
+        width="100%"
+        height="700%"
       />
-      <h1>Welcome to Meal Sharing restaurant</h1>
-      <h1>Eat Drink Visit</h1>
-      <p>
-        A restaurant is a restaurant that serves food and drinks for a fee .
-        Customers pay before or after the meal. The meal is generally eaten on
-        site, but many restaurants also offer take-out and delivery .
-        Restaurants vary greatly in the design and range of food cultures and
-        serving models . Although inns and tavernas have been known since
-        ancient times , they are intended for travelers, and locals would rarely
-        eat there. Modern restaurants have special dishes that are ordered by
-        customers and prepared according to their wishes. The modern restaurant
-        has its origins in 18th century France, although forerunners can be
-        traced back to the Roman Empire. [1] A restaurant proprietor is called a
-        restaurateur ; the word comes from the French verb restaurer , which
-        means to recreate . Professional craftsmen in the culinary arts are
-        called chefs .
-      </p>
-      <p>
-      A restaurant is a restaurant that serves food and drinks for a fee .
-      Customers pay before or after the meal. The meal is generally eaten on
-      site, but many restaurants also offer take-out and delivery . Restaurants
-      vary greatly in the design and range of food cultures and serving models .
-      Although inns and tavernas have been known since ancient times , they are
-      intended for travelers, and locals would rarely eat there. Modern
-      restaurants have special dishes that are ordered by customers and prepared
-      according to their wishes. The modern restaurant has its origins in 18th
-      century France, although forerunners can be traced back to the Roman
-      Empire. [1] A restaurant proprietor is called a restaurateur ; the word
-      comes from the French verb restaurer , which means to recreate .
-      Professional craftsmen in the culinary arts are called chefs . A
-      restaurant is a restaurant that serves food and drinks for a fee .
-      Customers pay before or after the meal. The meal is generally eaten on
-      site, but many restaurants also offer take-out and delivery . Restaurants
-      vary greatly in the design and range of food cultures and serving models .
-      Although inns and tavernas have been known since ancient times , they are
-      intended for travelers, and locals would rarely eat there. Modern
-      restaurants have special dishes that are ordered by customers and prepared
-      according to their wishes. The modern restaurant has its origins in 18th
-      century France, although forerunners can be traced back to the Roman
-      Empire. [1] A restaurant proprietor is called a restaurateur ; the word
-      comes from the French verb restaurer , which means to recreate .
-      Professional craftsmen in the culinary arts are called chefs .
-      </p>
+
+      
     </div>
   );
 };

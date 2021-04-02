@@ -1,134 +1,392 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #ebf4fa;
+}
 
-.App {
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  padding: 30px 30px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+  padding: 80px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 10px 10px 20px 10px rgba(39, 77, 2, 0.2);
+  padding: 1px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.mealDetails {
+  background-color: lightgrey;
+  width: 400px;
+  border: 15px solid #c48189;
+  padding: 50px;
+  margin: 20px;
+  font-size: larger;
+}
+.mealItem {
+  display: flex;
+  justify-content: center;
+}
+
+.errMessage {
+  font-weight: bold;
+  text-align: center;
+  color: red;
+}
+.successMessage {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue;
+  padding: 15px;
+  font-weight: bold;
+  color: green;
   text-align: center;
 }
+button {
+  font-size: larger;
+  background-color: #c48189;
+  width: 250px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.Addbutton {
+  text-align: center;
+  font-size: larger;
+}
+
+.formData {
+  font-size: x-large;
+  display: block;
+  padding-left: 15%;
+  border: 2px solid rgb(245, 241, 236);
+}
+
+/*styling for add meal form*/
+.title{
+  position: relative;
+  left: 200px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.addmeal_description{
+  position: relative;
+  left: 130px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.created_date{
+  position: relative;
+  left: 130px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.location{
+  position: relative;
+  left: 160px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.max_reservations{
+  position: relative;
+  left: 15px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.price{
+  position: relative;
+  left: 200px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.when{
+  position: relative;
+  left: 45px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+/*add reservation form*/
+.number_of_guests{
+  position: relative;
+  left: 85px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+.phonenumber{
+  position: relative;
+  left: 120px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+
+/*Add Review form*/
+
+.meal_description{
+ padding-right: 500px;
+}
+
+.description{
+  position: relative;
+  left: 185px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+
+}
+.cre_date{
+  position: relative;
+  left: 160px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+
+}
+
+.rating{
+  position: relative;
+  left:230px;
+  /* //top: -37px; */
+  line-height: 40px;
+  width:532 px;
+  border-radius: 10px;
+  padding: 15px 22px;
+  font-size: 16px;
+  color: #555;
+
+}
+/* input fields*/
+input[type="text"],
+select {
+  font-size: x-large;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+input[type="date"],
+select {
+  font-size: x-large;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+input[type="number"],
+select {
+  font-size: x-large;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+input[type="email"],
+select {
+  font-size: x-large;
+  width: 60%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+
+/* header*/
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
-  background-color: rgb(5, 54, 54);
-  color: rgb(199, 126, 126);
+  font-size: larger;
+  min-height: 15vh;
+  background-color: #c48189;
+  color: rgb(83, 17, 17);
 }
-/* footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 10vh;
-    background-color: rgb(73 79 82);
-    color :rgb(199, 126, 126);
-  } */
-.nav-links,
-.footer-links {
+
+.nav-links {
+  font-size: 24px;
   width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
 }
-body {
-  background-color: rgb(145, 253, 248);
+li {
+  list-style-type: none;
 }
-form {
-  display: inline;
-}
-
-.formData {
-  text-align: center;
-}
-/* mealDetail */
-.reservations {
-  align-items: center;
-  background-color: rgb(74, 228, 228);
-}
-
-/* .footer {
-    padding-top: 50px;
-  } */
-
-footer .nav {
-  /* this is footer navigation */
+.icons ul {
   display: flex;
-  justify-content: space-between;
-  width: auto;
+
+  margin-right: 400px;
+  justify-content: space-evenly;
   flex-direction: row;
-  list-style-type: none;
-  /* border: 1px solid #0000cd; */
 }
 
-footer nav a {
-  /*for header and footer  */
-  color: rgb(145, 253, 248);
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.footer-start ul {
-  /*footer start  */
-  display: flex;
-  text-align: left;
-  justify-content: space-between;
-  padding: 15px 30px 10px 50px;
-  /* padding-right: 350px; */
-  list-style-type: none;
-  font-family: "Helvetika", sans-serif;
-}
-
-.footer-center ul {
-  /* footer center  */
-  display: flex;
+.copyright {
   text-align: center;
-  justify-content: space-between;
-  list-style-type: none;
+  font-weight: bold;
+  background-color: #c48189;
 }
 
-.footer-center li {
-  /* footer center list  */
-  padding: 15px;
-  font-family: "Helvetika", sans-serif;
+/*footer*/
+
+footer {
+  font-size: large;
 }
 
-.footer-right ul {
-  /* footer end  */
+.footer-center {
+  padding-left: 300px;
+}
+
+/*search field*/
+.search_input {
+  /* text-align: center; */
+  border: azure;
+  font-size: x-large;
+  border-radius: 10px;
+  height: 50px;
+  width: 400px;
+
+  margin-bottom: 20px;
+}
+.search_input_box {
+  border-radius: 80px;
+  text-align: center;
+  width: 600px;
+  margin-left: 350px;
+
+  margin-top: 30px;
+}
+
+/*rating */
+.starRatingInput span {
+  background-color: transparent;
+  border: 0;
+  color: #969696;
+  font-size: 24px;
+  text-align: center;
+}
+.starRatingInput span.highlighted {
+  color: #d8b800;
+}
+.starRatingInput {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3233;
+}
+a:hover {
+  background-color: rgb(184, 241, 131);
+  color: white;
+  border-radius: 10px;
+}
+.ReviewButton {
+  background-color: rgb(2, 63, 43);
+  color: white;
+}
+.headingInHome {
+  font-size: 80px;
+}
+.homeDiv {
   display: flex;
-  text-align: right;
-  justify-content: space-between;
-  list-style-type: none;
-  margin-right: 50px;
-}
-
-.footer-right li {
-  /* footer end list */
-  /* border: 1px solid #0000cd; */
-  padding: 15px;
-}
-
-.boxEffect {
-  width: 500px;
-  box-shadow: 8px 8px 6px 2px rgb(66, 66, 61);
-  /* width: 300px; */
-  /* margin-left: 200px; */
-  background-color: rgb(36, 126, 126);
-  color: rgb(145, 253, 248);
-}
-.mealImg {
-  padding: 25px 0 0 30px;
-}
-.meals {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  /* align-items: center; */
-}
-.eachMeal {
-  box-shadow: 4px 2px 3px 3px rgb(66, 66, 61);
-}
-input {
-  background-color: rgb(145, 253, 248);
-}
-button {
-  background-color: rgb(36, 126, 126);
+  flex-direction: row;
 }

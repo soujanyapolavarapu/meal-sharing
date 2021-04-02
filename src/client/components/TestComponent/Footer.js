@@ -1,5 +1,10 @@
 import React from "react";
-
+import {
+  FaTwitter,
+  FaFacebookF,
+  FaInstagramSquare,
+  FaLinkedin,
+} from "react-icons/fa";
 
 function Footer() {
   const footerStyle = {
@@ -9,82 +14,54 @@ function Footer() {
     <footer className="footer">
       <nav className="nav">
         <div className="footer-start">
+          <h1>COMPANY</h1>
           <ul>
-            <li>
-              <img
-                src="src/client/components/TestComponent/testImg.png"
-                alt="MealSharing logo"
-                width="100"
-                height="50"
-              />
-            </li>
-            <li>
-              <span className="aside">
-                2021 by <strong>Soujanya</strong>
-              </span>
-            </li>
+            <li>Aboutus</li>
+            <li>Our Services</li>
+            <li>Terms</li>
+            <li>Blog</li>
           </ul>
         </div>
         <div className="footer-center">
-          <ul>
-            <li>
-              <a href="#">LICENSE</a>
-            </li>
-            <li>
-              <a href="#">TERMS</a>
-            </li>
-            <li>
-              <a href="#">RETURNS</a>
-            </li>
-            <li>
-              <a href="#about">ABOUT</a>
-            </li>
-            <li>
-              <a href="#">SUPPORT</a>
-            </li>
-          </ul>
+          <br />
+          <h1 id="contact">CONTACT</h1>
+          <li>mealsharing_soujanya@gmail.com</li>
+          <li>+45 12345678</li>
+          {/* <h3>mealsharing_soujanya@gmail.com</h3>
+          <h3>+45 12345678</h3> */}
+
+          <div className="icons">
+            <ul>
+              <li>
+                <FaTwitter />
+              </li>
+              <li>
+                <FaFacebookF />
+              </li>
+              <li>
+                <FaInstagramSquare />
+              </li>
+              <li>
+                <FaLinkedin />
+              </li>
+            </ul>
+          </div>
         </div>
+
         <div id="social-media" className="footer-right">
+          <h1>ADDRESS</h1>
           <ul>
-            <li>
-              <a href="#">
-                <i className="fas fa-tag"></i>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Terms & Conditions
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Details
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Contact info
-              </a>
-            </li>
+            <li>Algade 56</li>
+            <li>Svogerslev</li>
+            <li>Roskilde</li>
+            <li>4000</li>
           </ul>
         </div>
       </nav>
+      <div className="copyright">
+        CopyRight@2021, Mealsharing- Designed by Soujanya Polavarapu.
+      </div>
     </footer>
-
-    //    <footer>
-    //     <img src='src/client/components/TestComponent/mealshare-logo(1).png' alt='MealSharing logo' width='100' height='53'/>
-    //     <ul className='footer-links'>
-    //       <Link to = {'/about'} style={footerStyle}>
-    //         <li>About</li>
-    //       </Link>
-    //       <Link to = {'/carrers'} style={footerStyle}>
-    //         <li>Carrers</li>
-    //       </Link>
-    //       <Link to = {'/contact'} style={footerStyle}>
-    //         <li>Contact</li>
-    //       </Link>
-    //     </ul>
-    // </footer>
   );
 }
 
