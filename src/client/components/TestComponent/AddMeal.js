@@ -44,7 +44,7 @@ const AddMeal = () => {
   const sendData = (e) => {
     e.preventDefault();
       const mealData = {
-        id: Math.floor(Math.random() * 100),
+        // id: Math.floor(Math.random() * 100),
         title: title,
         description: description,
         created_date: created_date,
