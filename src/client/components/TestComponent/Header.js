@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <nav>
       <img
-        src="src/client/components/TestComponent/img3.jpeg"
+        src="https://i.ibb.co/RNsqzBk/img3.jpg"
         alt="MealSharing logo"
         width="180"
         height="120"

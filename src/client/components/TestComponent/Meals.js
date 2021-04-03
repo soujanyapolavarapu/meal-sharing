@@ -21,12 +21,12 @@ const Meals = ({ meals, setSearchMeal, searchMeal, isLoading, reviews }) => {
     return averageRatings;
   };
   const imgArray=[
-    "src/client/components/TestComponent/imgorder1.png",
-    "src/client/components/TestComponent/imgorder2.png",
-    "src/client/components/TestComponent/imgorder3.png",
-    "src/client/components/TestComponent/imgorder4.jpeg",
-    "src/client/components/TestComponent/imgorder5.jpeg",
-    "src/client/components/TestComponent/imgorder6.jpeg"
+    "https://i.ibb.co/tYB4HsV/imgorder1.png",
+    "https://i.ibb.co/wdZ6pYy/imgorder2.jpg",
+    "https://i.ibb.co/T2jnxMj/imgorder3.png",
+    "https://i.ibb.co/TwLPb9r/imgorder4.jpg",
+    "https://i.ibb.co/mSXcHrD/imgorder5.jpg",
+    "https://i.ibb.co/0YBmRMm/imgorder6.jpg"
   ];
 
 
@@ -53,7 +53,7 @@ const Meals = ({ meals, setSearchMeal, searchMeal, isLoading, reviews }) => {
           <div key={meal.id} className="column">
             <div className="card">
                 <img
-                src= {imgArray[i]?imgArray[i]:'/src/client/components/TestComponent/imgdefault.jpeg'}
+                src= {imgArray[i]?imgArray[i]:"https://i.ibb.co/fMVnBYH/imgdefault.jpg"}
                 alt="Meal Image"
                 height="200px"
                 width="320px"

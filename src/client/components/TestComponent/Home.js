@@ -36,7 +36,7 @@ const Home = ({ meals, isLoading }) => {
       </div>
       </div>
       <img
-        src="/src/client/components/TestComponent/img2.jpeg"
+        src="https://i.ibb.co/SKn0nSF/img2.jpg"
         alt="food_image"
         width="100%"
         height="700%"
