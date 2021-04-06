@@ -29,13 +29,14 @@ function App() {
           setMeals(meals);
         });
     } else {
-      fetch(`http://localhost:5000/api/meals?title=${searchMeal}`)
+      fetch(`/api/meals?title=${searchMeal}`)
         .then((res) => res.json())
         .then((data) => {
           setIsLoading(false);
           console.log(data);
+          console.log('hello i am serching')
           setMeals(data);
-        });
+        })
     }
   };
 
