@@ -49,13 +49,12 @@ const Meals = ({ meals, setSearchMeal, searchMeal, isLoading, reviews }) => {
       )}
 
       <div className="row">
-        {meals.map((meal,index) => (
+        {meals.map((meal,i) => (
           
           <div key={meal.id} className="column">
-            {console.log(index, meal.id)}
             <div className="card">
                 <img
-                src= {imgArray[index]?imgArray[index]:"https://i.ibb.co/fMVnBYH/imgdefault.jpg"}
+                src= {imgArray[meal.id-1]?imgArray[meal.id-1]:"https://i.ibb.co/fMVnBYH/imgdefault.jpg"}
                 alt="Meal Image"
                 height="200px"
                 width="320px"

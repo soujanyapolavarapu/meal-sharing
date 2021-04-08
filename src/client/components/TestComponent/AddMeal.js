@@ -67,7 +67,7 @@ const AddMeal = () => {
     <div>
       <div className="Addbutton">
         <h1>
-          Would you like to share your recepie?? If yes, please click the
+          Become a host!!!  Would you like to share your recepie?? If yes, please click the
           button..
         </h1>
         <button onClick={addMeal}>Add Meal</button>

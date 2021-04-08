@@ -59,7 +59,7 @@ function Footer() {
         </div>
       </nav>
       <div className="copyright">
-        CopyRight@2021, Mealsharing- Designed by Soujanya Polavarapu.
+        CopyRight@2021, Mealsharing-website Designed by <a href="https://github.com/soujanyapolavarapu" target="_blank"> SoujanyaPolavarapu</a>.
       </div>
     </footer>
   );

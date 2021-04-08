@@ -390,3 +390,8 @@ a:hover {
   display: flex;
   flex-direction: row;
 }
+
+/*responsive design For mobiles*/
+@media(max-width: 574px){
+  
+}

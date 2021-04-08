@@ -117,7 +117,9 @@ switch(true){
                'reservation.number_of_guests as reserved')
             // knex.raw('meal.max_reservations - reservation.number_of_guests as unreserved'))
              .from('meal')
-             .leftJoin("reservation", "meal.id", "=", "reservation.meal_id");
+             .leftJoin("reservation", "meal.id", "=", "reservation.meal_id")
+             .orderBy('meal.id');
+             //console.log(availableMeals);
           
              //making null values to zeros for getting unreserved column/key
             const changedValue = availableMeals.forEach(meal =>{

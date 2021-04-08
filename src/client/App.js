@@ -7,6 +7,7 @@ import "./App.css";
 import Header from "./components/TestComponent/Header";
 import Footer from "./components/TestComponent/Footer";
 import AddReview from "./components/TestComponent/AddReview";
+import AddMeal from "./components/TestComponent/AddMeal";
 //import AddMeal from "./components/TestComponent/AddMeal";
 
 function App() {
@@ -76,17 +77,14 @@ function App() {
           reviews={reviews}
         />
       </Route>
-      <Route exact path="/meals/about">
-          <h1>hi</h1>
+      <Route exact path="/meals/addMeal">
+      <AddMeal/>
         </Route>
         <Route exact path="/meals/contact">
           <h1>contact</h1>
         </Route>  
       <Route exact path="/meals/:id">
         <MealDetail meals={meals} />
-      </Route>
-      <Route exact path="/meals/:id/mealReview">
-        <AddReview />
       </Route>
       <Footer />
      

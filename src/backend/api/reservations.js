@@ -20,6 +20,7 @@ router.get("/", async (request, response) => {
 //Adds a new reservation
 router.post("/", async (request, response) => {
     try {
+      console.log(request.body)
       // knex syntax for selecting things. Look up the documentation for knex for further info
       // const titles = await knex("meals").select("title");
       // response.json(titles);
