@@ -86,6 +86,9 @@ function App() {
       <Route exact path="/meals/:id">
         <MealDetail meals={meals} />
       </Route>
+      <Route exact path="/meals/:id/mealReview">
+        <AddReview />
+      </Route>
       <Footer />
      
     </Router>

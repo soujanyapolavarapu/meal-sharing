@@ -122,18 +122,21 @@ switch(true){
              //console.log(availableMeals);
           
              //making null values to zeros for getting unreserved column/key
-            const changedValue = availableMeals.forEach(meal =>{
-               if(meal.reserved === null){
-                meal.reserved=0;
-              }
-              let unreserved= meal.Total_reservations - meal.reserved;
-              meal.unreserved = unreserved;
-             });
-             response.status(200).send(availableMeals);
-            }else{
-              response.status(400).send();
-            }  
-                break;
+             const changedValue = availableMeals.forEach((meal) => {
+              if (meal.reserved === null) {
+                meal.reserved = 0;
+              }   
+              let unreserved = meal.Total_reservations - meal.reserved;
+              meal.unreserved = unreserved;  
+            });
+  
+            //const updatedArray = changedValue.forEach(item=>item.mead_id === )
+            
+            response.status(200).send(availableMeals);
+          } else {
+            response.status(400).send();
+          }
+          break;
 
     case  key === "title":
               meals = await knex("meal")
