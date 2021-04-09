@@ -77,7 +77,7 @@ const AddReview = () => {
     <div className='mealItem'>
       <div className="mealDetails">
         <img
-          src="src/client/components/TestComponent/imgdefault.jpeg"
+          src="https://i.ibb.co/fMVnBYH/imgdefault.jpg"
           width="250px"
           height='150px'
         ></img>

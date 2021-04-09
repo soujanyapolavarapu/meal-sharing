@@ -119,6 +119,11 @@ const Meals = ({ meals, setSearchMeal, searchMeal, isLoading, reviews }) => {
                   <button className="ReviewButton">Add review</button>
                 </div>
               </Link>
+              <Link to={`/meals/${meal.id}`}>
+                <div>
+                  <button className="ReviewButton">Book Meal</button>
+                </div>
+              </Link>
             </div>
           </div>
         ))}
