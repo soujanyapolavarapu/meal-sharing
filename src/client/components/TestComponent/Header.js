@@ -8,10 +8,11 @@ const Header = () => {
   return (
     <nav>
       <img
+      className='header-logo'
         src="https://i.ibb.co/RNsqzBk/img3.jpg"
         alt="MealSharing logo"
-        width="180"
-        height="120"
+        // width="180"
+        // height="120"
       />
       <ul className="nav-links">
         <Link to={"/"} style={navStyle}>

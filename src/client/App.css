@@ -55,7 +55,7 @@ body {
   justify-content: center;
 }
 
-.errMessage {
+/* .errMessage {
   font-weight: bold;
   text-align: center;
   color: red;
@@ -68,7 +68,7 @@ body {
   font-weight: bold;
   color: green;
   text-align: center;
-}
+} */
 button {
   font-size: larger;
   background-color: #c48189;
@@ -290,6 +290,11 @@ select {
 }
 
 /* header*/
+
+.header-logo{
+  width: 180px;
+  height: 120px;
+}
 nav {
   display: flex;
   justify-content: space-around;
@@ -311,12 +316,29 @@ nav {
 li {
   list-style-type: none;
 }
-.icons ul {
-  display: flex;
 
-  margin-right: 400px;
+.social-links {
+  display: inline-block;
+  margin-right: 100px;
   justify-content: space-evenly;
   flex-direction: row;
+}
+
+.social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(215, 248, 237, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 50%;
+  color: rgb(92, 29, 29);
+  transition: all 0.5s ease;
+}
+.social-links a:hover {
+  color: rgb(92, 29, 29);
+  background-color: #ffffff;
 }
 
 .copyright {
@@ -391,7 +413,120 @@ a:hover {
   flex-direction: row;
 }
 
+.home-img{
+  width:100%;
+  height:700px;
+}
 /*responsive design For mobiles*/
-@media(max-width: 574px){
+@media(max-width: 425px){
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  button {
+    font-size: small;
+    background-color: #c48189;
+    width: 150px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+
+  .meals-image{
+    height:150px;
+    width:150px;
+  }
+
+  .search_input_box {
+    margin-left: 5px;
+  }
+
+  .card{
+    width: 450px;
+  }
+  /*Form */
+  
+  .title{
+    left: 250px;
+  }
+  .addmeal_description{
+    left: 180px;
+  }
+
+  .created_date{
+    left: 180px;
+  }
+
+  .location{
+    left: 210px;
+  }
+
+  .max_reservations{
+    left: 310px;
+  }
+
+  .price{
+    left: 250px;
+  }
+
+  .when{
+    left: 310px;
+  }
+
+   /* header*/
+   /* .header-logo{
+    width: 80px;
+    height: 4 0px;
+  } */
+
+  nav{
+    width: 600px;
+    height: 20px;
+
+  }
+
+  /*Add meal component*/
+  .Addbutton {
+    font-size: small;
+    padding-left: 200px;
+  }
+
+  .addmeal_description, .created_date{
+    left: 180px;
+  }
+
+  .footer-center {
+    padding-left: 100px;
+  }
+
+  footer {
+    width: 100%;
+    font-size: large;
+    padding-bottom: 0;
+  }
+
+  .copyright{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 740px;
+    padding-bottom: 0;
+  }
+
+  /* Home component*/
+   .headingInHome{
+    font-size: 60px;
+  } 
+
+  .homeDiv {
+    display: flex;
+    flex-direction: row;
+    width: 950px;
+  }
+  .home-img{
+    width:740px;
+    height:700px;
+  }
   
 }

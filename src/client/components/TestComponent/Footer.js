@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  FaTwitter,
+  FaGithub,
   FaFacebookF,
   FaInstagramSquare,
   FaLinkedin,
@@ -30,22 +30,22 @@ function Footer() {
           {/* <h3>mealsharing_soujanya@gmail.com</h3>
           <h3>+45 12345678</h3> */}
 
-          <div className="icons">
-            <ul>
-              <li>
-                <FaTwitter />
-              </li>
-              <li>
-                <FaFacebookF />
-              </li>
-              <li>
-                <FaInstagramSquare />
-              </li>
-              <li>
+          {/* Below links will connect to social network accounts of company   */}
+          <div className="social-links">
+              <h4>Follow us</h4>
+              <a href="https://www.linkedin.com/in/soujanya-polavarapu-816785110/">
                 <FaLinkedin />
-              </li>
-            </ul>
-          </div>
+              </a>
+              <a href="https://github.com/soujanyapolavarapu">
+                <FaGithub />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100011583960230">
+                <FaFacebookF />
+              </a>
+              <a href="https://www.instagram.com/soujanyapolavarapu/">
+                <FaInstagramSquare />
+              </a>
+            </div>
         </div>
 
         <div id="social-media" className="footer-right">

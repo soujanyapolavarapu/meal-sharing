@@ -155,7 +155,7 @@ const AddMeal = () => {
               placeholder="Price"
             />
             <br />
-            <label htmlFor="when">*Meal Available From</label>
+            <label htmlFor="when" className='label-meal-available-frm'>*Meal Available From</label>
             <input
               type="date"
               id="when"

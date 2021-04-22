@@ -53,7 +53,7 @@ const Meals = ({ meals, setSearchMeal, searchMeal, isLoading, reviews }) => {
           
           <div key={meal.id} className="column">
             <div className="card">
-                <img
+                <img className='meals-image'
                 src= {imgArray[meal.id-1]?imgArray[meal.id-1]:"https://i.ibb.co/fMVnBYH/imgdefault.jpg"}
                 alt="Meal Image"
                 height="200px"
