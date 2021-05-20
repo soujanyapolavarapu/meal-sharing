@@ -85,18 +85,18 @@ router.delete("/:id", async (request, response) => {
 //query params 
 router.get("/", async (request, response) => {
   try{
-    key = Object.keys(request.query)[0];
+     key = Object.keys(request.query)[0];
 
     const maxPrice = parseInt(request.query.maxPrice) || '1e500';
     const matchingTitle = request.query.title || '';
     let  createdAfter = new Date(request.query.createdAfter) ;
     createdAfter = (createdAfter > 0) ? createdAfter.toISOString() : 0;
     const availableReservations = request.query.availableReservations || '';
-    const value = parseInt(request.query.limit) || '1e500';
+    value = parseInt(request.query.limit) || '1e500';
 
 switch(true){
     case  typeof(key) === "undefined":
-           meals = await knex("meal")
+            meals = await knex("meal")
            response.send(meals);
          break;
 
@@ -117,21 +117,26 @@ switch(true){
                'reservation.number_of_guests as reserved')
             // knex.raw('meal.max_reservations - reservation.number_of_guests as unreserved'))
              .from('meal')
-             .leftJoin("reservation", "meal.id", "=", "reservation.meal_id");
+             .leftJoin("reservation", "meal.id", "=", "reservation.meal_id")
+             .orderBy('meal.id');
+             //console.log(availableMeals);
           
              //making null values to zeros for getting unreserved column/key
-            const changedValue = availableMeals.forEach(meal =>{
-               if(meal.reserved === null){
-                meal.reserved=0;
-              }
-              let unreserved= meal.Total_reservations - meal.reserved;
-              meal.unreserved = unreserved;
-             });
-             response.status(200).send(availableMeals);
-            }else{
-              response.status(400).send();
-            }  
-                break;
+             const changedValue = availableMeals.forEach((meal) => {
+              if (meal.reserved === null) {
+                meal.reserved = 0;
+              }   
+              let unreserved = meal.Total_reservations - meal.reserved;
+              meal.unreserved = unreserved;  
+            });
+  
+            //const updatedArray = changedValue.forEach(item=>item.mead_id === )
+            
+            response.status(200).send(availableMeals);
+          } else {
+            response.status(400).send();
+          }
+          break;
 
     case  key === "title":
               meals = await knex("meal")
